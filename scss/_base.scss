@@ -5,6 +5,7 @@
   --orange: #FF4600;
   --blue: #0044FF;
   --cyan: #03FFC7;
+  --black: #000013;
 }
 
 *,
@@ -19,8 +20,11 @@ body{
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
   width: 100%;
+  font-size: 1.6rem;
+  font-weight: 400;
   position: relative;
 }
 html{
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }

@@ -9,10 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <!-- AOS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Glidejs -->
     <link
       rel="stylesheet"
@@ -25,7 +22,7 @@
   </head>
   <body>
   <!-- front page header -->
-  <div class="header-page"> 
+  <div class="header-page" id="Home"> 
     <!-- nav bar -->
     <nav>
       <!-- logo -->
@@ -45,8 +42,8 @@
       <div class="pageContainer-intro">
         <h3 class="pageContainer-intro--greeting">Hello,  my name is</h3>
         <h1 class="pageConatainer-intro--name">BABITH K P</h1>
-        <h4 class="pageContainer-intro--self">And l'm a <span class="animate"></span></h4>
-        <button class="pageConatainer-intro--button">Hire me</button>
+        <h4 class="pageContainer-intro--self">And l'm a <span class="animates"></span></h4>
+        <button class="pageConatainer-intro--button btn">Hire me</button>
       </div>
       <!-- socail media links icon -->
       <div class="pageContainer-intro--icons">
@@ -62,20 +59,25 @@
       </div>
     </div>
   </div>
-  <div class="aboutPage" id="about">
+  <!-- about me section -->
+  <div class="aboutPage" id="About">
     <h2 class="aboutPage-head">About me</h2>
-    <div class="aboutPage-profilePic">
+    <div class="aboutPage-profilePic" data-aos="fade-right" data-aos-duration="2000">
       <img class="aboutPage-img" src="assets/images/profile1.jpg" alt="profile phto">
     </div>
-    <div class="aboutPage-contains">
-      <h4>I'm Portfolio Website and a <span class="animate"></span></h4>
+    <div class="aboutPage-contains" data-aos="fade-left" data-aos-duration="2000">
+      <h3 class="aboutPage-contains--head">I'm Babith K P and a <span class="animate"></span></h3>
       <p>I'm a Learner From Codedamn. A Android geek, Linux ethusiast, I am highly passionate about the web technology and programming.</p>
-      <button type="button">Download CV</button>
+      <button type="button" class="aboutPage-contains--btn">Download CV</button>
     </div>
   </div>
 
+  <footer>
+    <p>Created by <a href="#" class="copy-link">Babith K P</a> | &copy; 2023 All rights reserved.</p>
+  </footer>
+
     <!-- AOS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Typeit -->
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <!-- GSAP -->

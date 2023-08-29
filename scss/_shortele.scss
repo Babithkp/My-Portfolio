@@ -4,28 +4,28 @@
 }
 .about{
     opacity: 0;
-    animation: navList .8s ease-in-out 1.2s forwards;
+    animation: navList .8s ease-in-out 1.3s forwards;
 }
 .Services{
     opacity: 0;
-    animation: navList .8s ease-in-out 1.4s forwards;
+    animation: navList .8s ease-in-out 1.5s forwards;
 }
 .skill{
     opacity: 0;
-    animation: navList .8s ease-in-out 1.6s forwards;
+    animation: navList .8s ease-in-out 1.7s forwards;
 }
 .teams{
     opacity: 0;
-    animation: navList .8s ease-in-out 1.8s forwards;
+    animation: navList .8s ease-in-out 1.9s forwards;
 }
 .contact{
     opacity: 0;
-    animation: navList .8s ease-in-out 2s forwards;
+    animation: navList .8s ease-in-out 2.1s forwards;
 }
 
 .fa-linkedin-in{
     opacity: 0;
-    animation: icons 1.5s ease-in-out 2.8s forwards;
+    animation: icons 1.5s ease-in-out 2s forwards;
 }
 .fa-github{
     opacity: 0;
@@ -44,5 +44,8 @@
     animation: icons 1.5s ease-in-out 3.3s forwards;
 }
 .animate{
+    color: var(--customColor);
+}
+.animates{
     color: var(--customColor);
 }

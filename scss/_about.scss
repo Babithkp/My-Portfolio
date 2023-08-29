@@ -1,10 +1,61 @@
 .aboutPage{
-    height: 90vh;
-
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 30% 1fr;
+    grid-template-columns: 40% 1fr;
+    column-gap: 5rem;
+    
     &-head{
-
+        grid-column: 2;
+        align-self: end;
+        font-weight: 200;
+        font-size: 3rem;
+        margin-left: 5rem;
+        margin-bottom: 5rem;
     }
+    &-profilePic{
+
+        flex:1;
+    }
+    
+    &-contains{
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        gap: 2rem;
+        
+        &--head{
+            font-weight: 300;
+            font-size: 2.3rem;
+        }
+        & p{
+            line-height: 3rem;
+        }
+
+        &--btn{
+            height: 4.5rem;
+            width: 15rem;  
+            font-weight: 500;  
+            background-color: var(--customColor);
+            border: none;
+            font-size: 1.6rem;
+            color: #fff;
+            border-radius: .5rem;
+            border:.1rem solid var(--customColor);
+            transition: all .5s; 
+            box-shadow: 0rem .1rem .5rem var(--black);
+        }
+
+        &--btn:hover{
+            transform: translateY(-.2rem);
+            border: .2rem solid var(--customColor);
+            background-color: #fff;
+            color: var(--black);
+        }
+    }
+
     &-img{
-        height: 40rem;
+        clip-path: polygon(20% 0%, 80% 0%, 80% 100%, 20% 100%);
+        max-height: 40rem;
     }
 }

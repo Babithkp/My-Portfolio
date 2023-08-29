@@ -8,11 +8,14 @@
 }
 
 @keyframes navList{
-    0% {transform: translateY(0rem);
-        opacity: 0;
+    0% {transform: translateY(2.5rem);
+    }
+    40% {
+        opacity: 1;
+
     }
     100% {
-        transform: translateY(-1.5rem);
+        transform: translateY(0rem);
         opacity: 1;
     }
 }
@@ -38,11 +41,11 @@
 
 @keyframes firsthero{
     0% {
-        transform: translateX(-20rem);
+        transform: translateX(-40rem);
         opacity: 0;
     }
     100% {
-        transform: translateX(0rem);
+        transform: translateX(-20rem);
         opacity: 1;
     }
 }

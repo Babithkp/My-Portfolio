@@ -4,6 +4,7 @@
   --orange: #FF4600;
   --blue: #0044FF;
   --cyan: #03FFC7;
+  --black: #000013;
 }
 
 *,
@@ -19,20 +20,26 @@ body {
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
   width: 100%;
+  font-size: 1.6rem;
+  font-weight: 400;
   position: relative;
 }
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 .header-page {
-  background-color: #000013;
+  background-color: var(--black);
   height: 100vh;
+  position: inherit;
 }
 
 nav {
   color: var(--customColor);
+  position: absolute;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   height: 10%;
@@ -49,7 +56,6 @@ nav {
   display: flex;
   z-index: 2;
   gap: 1rem;
-  transform: translateY(2rem);
 }
 .nav-list * {
   color: #fff;
@@ -64,6 +70,15 @@ nav {
 .nav-list *:hover {
   background-color: var(--customColor);
 }
+.nav-fix {
+  background-color: var(--customColor);
+  color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+}
 
 li a {
   display: flex;
@@ -72,16 +87,17 @@ li a {
 }
 
 .pageContainer {
-  height: 91%;
+  height: 100%;
   display: grid;
-  grid-template-columns: 30% 1fr;
-  grid-template-rows: 1fr, 1fr;
+  grid-template-columns: minmax(40%, 50%) 1fr;
+  grid-template-rows: 30% 1fr 1fr;
   margin-left: 14rem;
   position: relative;
+  overflow: hidden;
 }
 .pageContainer-intro {
   align-self: end;
-  margin-bottom: 5rem;
+  grid-row: 2/3;
 }
 .pageContainer-intro * {
   color: #fff;
@@ -91,9 +107,9 @@ li a {
 .pageContainer-intro--icons {
   font-size: 2rem;
   color: var(--blue);
-  grid-row: 2/3;
+  grid-row: 3/-1;
   align-self: center;
-  margin-top: 10rem;
+  margin-top: 15rem;
 }
 .pageContainer-intro--icons * {
   cursor: pointer;
@@ -110,7 +126,7 @@ li a {
   opacity: 0;
   animation: hello 1s ease-in-out 2.2s forwards;
 }
-.pageContainer .pageConatainer-intro--button {
+.pageContainer .btn {
   height: 3.5rem;
   width: 10.5rem;
   background-color: var(--customColor);
@@ -121,17 +137,16 @@ li a {
   opacity: 0;
   animation: btn 0.8s ease-in-out 2.8s forwards;
 }
-.pageContainer .pageConatainer-intro--button:hover {
+.pageContainer .btn:hover {
   background-color: inherit;
 }
 .pageContainer-image {
-  width: 100%;
-  grid-row: 1/3;
-  align-items: start;
+  grid-row: 1/4;
   position: relative;
 }
 .pageContainer-image--png {
-  width: 90rem;
+  width: 100rem;
+  height: 100%;
   z-index: 0;
   opacity: 0;
   scale: 2rem;
@@ -143,20 +158,6 @@ h1.pageConatainer-intro--name {
   opacity: 0;
   font-size: 5.8rem;
   animation: hello 0.8s ease-in-out 2s forwards;
-}
-
-.fix-nav {
-  background-color: var(--customColor);
-  color: #fff;
-  position: fixed;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 2;
-}
-
-.gap {
-  margin-top: 6rem;
 }
 
 @keyframes wesite {
@@ -171,11 +172,13 @@ h1.pageConatainer-intro--name {
 }
 @keyframes navList {
   0% {
-    transform: translateY(0rem);
-    opacity: 0;
+    transform: translateY(2.5rem);
+  }
+  40% {
+    opacity: 1;
   }
   100% {
-    transform: translateY(-1.5rem);
+    transform: translateY(0rem);
     opacity: 1;
   }
 }
@@ -201,11 +204,11 @@ h1.pageConatainer-intro--name {
 }
 @keyframes firsthero {
   0% {
-    transform: translateX(-20rem);
+    transform: translateX(-40rem);
     opacity: 0;
   }
   100% {
-    transform: translateX(0rem);
+    transform: translateX(-20rem);
     opacity: 1;
   }
 }
@@ -227,32 +230,32 @@ h1.pageConatainer-intro--name {
 
 .about {
   opacity: 0;
-  animation: navList 0.8s ease-in-out 1.2s forwards;
+  animation: navList 0.8s ease-in-out 1.3s forwards;
 }
 
 .Services {
   opacity: 0;
-  animation: navList 0.8s ease-in-out 1.4s forwards;
+  animation: navList 0.8s ease-in-out 1.5s forwards;
 }
 
 .skill {
   opacity: 0;
-  animation: navList 0.8s ease-in-out 1.6s forwards;
+  animation: navList 0.8s ease-in-out 1.7s forwards;
 }
 
 .teams {
   opacity: 0;
-  animation: navList 0.8s ease-in-out 1.8s forwards;
+  animation: navList 0.8s ease-in-out 1.9s forwards;
 }
 
 .contact {
   opacity: 0;
-  animation: navList 0.8s ease-in-out 2s forwards;
+  animation: navList 0.8s ease-in-out 2.1s forwards;
 }
 
 .fa-linkedin-in {
   opacity: 0;
-  animation: icons 1.5s ease-in-out 2.8s forwards;
+  animation: icons 1.5s ease-in-out 2s forwards;
 }
 
 .fa-github {
@@ -279,9 +282,77 @@ h1.pageConatainer-intro--name {
   color: var(--customColor);
 }
 
+.animates {
+  color: var(--customColor);
+}
+
 .aboutPage {
-  height: 90vh;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 30% 1fr;
+  grid-template-columns: 40% 1fr;
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+}
+.aboutPage-head {
+  grid-column: 2;
+  align-self: end;
+  font-weight: 200;
+  font-size: 3rem;
+  margin-left: 5rem;
+  margin-bottom: 5rem;
+}
+.aboutPage-profilePic {
+  flex: 1;
+}
+.aboutPage-contains {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  gap: 2rem;
+}
+.aboutPage-contains--head {
+  font-weight: 300;
+  font-size: 2.3rem;
+}
+.aboutPage-contains p {
+  line-height: 3rem;
+}
+.aboutPage-contains--btn {
+  height: 4.5rem;
+  width: 15rem;
+  font-weight: 500;
+  background-color: var(--customColor);
+  border: none;
+  font-size: 1.6rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--customColor);
+  transition: all 0.5s;
+  box-shadow: 0rem 0.1rem 0.5rem var(--black);
+}
+.aboutPage-contains--btn:hover {
+  transform: translateY(-0.2rem);
+  border: 0.2rem solid var(--customColor);
+  background-color: #fff;
+  color: var(--black);
 }
 .aboutPage-img {
-  height: 40rem;
+  -webkit-clip-path: polygon(20% 0%, 80% 0%, 80% 100%, 20% 100%);
+          clip-path: polygon(20% 0%, 80% 0%, 80% 100%, 20% 100%);
+  max-height: 40rem;
+}
+
+footer {
+  background-color: var(--black);
+  color: #fff;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.copy-link {
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */
