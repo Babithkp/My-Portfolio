@@ -61,3 +61,15 @@
         opacity: 1;
     }
 }
+
+@keyframes iconBright{
+    0%{
+        color: var(--customColor);
+    }
+    20% {
+        color: var(--white);
+    }
+    100% {
+        color: var(--white);
+    }
+}

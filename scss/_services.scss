@@ -1,0 +1,59 @@
+.myservices{
+    min-height: 60vh;
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    &-head{
+        margin-top: 5rem;
+        font-size: 3rem;
+
+    }
+
+    &-contains{
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+
+        &--item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            border-radius: 1rem;
+
+        }
+        
+        &--item:hover{
+            background-color: var(--customColor);
+            
+        }
+        &--item:hover i{
+            animation: iconBright .5s ease-in-out .2s forwards;
+        }
+
+        &--item i{
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: var(--customColor);
+        }
+
+        &--item h4{
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        &--item p{
+            font-size: 1.5rem;
+        }
+    }
+
+
+}
+
