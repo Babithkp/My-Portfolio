@@ -26,7 +26,7 @@
             padding-top: 2rem;
             padding-bottom: 2rem;
             border-radius: 1rem;
-
+            
         }
         
         &--item:hover{
@@ -34,10 +34,11 @@
             
         }
         &--item:hover i{
-            animation: iconBright .5s ease-in-out .2s forwards;
+            color: var(--white);
         }
-
+        
         &--item i{
+            transition: all .3s ease-in-out;
             font-size: 4rem;
             margin-bottom: 1rem;
             color: var(--customColor);

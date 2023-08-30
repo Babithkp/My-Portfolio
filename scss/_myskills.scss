@@ -1,0 +1,73 @@
+.myskills{
+    min-height: 70vh;
+    display: grid;
+    grid-template-rows: 30% 1fr;
+    
+    &-head{
+        grid-column: 1 / 3;
+        align-self: center;
+        justify-self: center;
+        margin-top: 3rem;
+    }
+    &-head h5{
+        font-size: 3.1rem;
+        font-weight: 200;
+
+    }
+
+    &-box{
+        grid-column: 1 / 3;
+        display: flex;
+        gap: 6rem;
+    }
+    &-levels{
+        width: 50%;
+        // background-color: yellowgreen;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        &--box{
+            width: 85%;
+            margin-top: 2rem;
+        }
+        &--line{
+            display: grid;
+            grid-template-columns: 5rem 1fr 5rem;
+            grid-template-rows: 1fr;
+            margin-bottom: 2rem;
+        }
+        &--line h5{
+            color: grey;
+            font-size: 1.7rem;
+            font-weight: 400;
+        }
+        &--line span{
+            font-size: 1.5rem;
+            grid-column: 3 / 4;
+            justify-self: end;
+        }
+        &--total{
+            width: 100%;
+            height: .4rem;
+            grid-column: 1 / 4;
+            background-color: rgb(224, 217, 217);
+        }   
+        &--score{
+            width: 95%;
+            height: .4rem;
+            background-color: var(--customColor);
+            z-index: 10;
+        }
+    }
+    
+    &-about{
+        width: 50%;
+        background-color: burlywood;
+
+    }
+}
+
+.css{
+    width: 85%;
+}
