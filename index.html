@@ -11,13 +11,10 @@
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Glidejs -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css"
-    />
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
     <!-- Custom StyleSheet -->
-    <link rel="stylesheet" href="/scss/main.css" />
     <link rel="shortcut icon" href="/assets/images/ironman.ico" />
+    <link rel="stylesheet" href="/scss/main.css" />
     <title>Portfolio Website</title>
   </head>
   <body>
@@ -68,11 +65,11 @@
     <div class="aboutPage-contains" data-aos="fade-left" data-aos-duration="2000">
       <h3 class="aboutPage-contains--head">I'm Babith K P and a <span class="animate"></span></h3>
       <p>I'm a Learner From Codedamn. A Android geek, Linux ethusiast, I am highly passionate about the web technology and programming.</p>
-      <button type="button" class="aboutPage-contains--btn">Download CV</button>
+      <button type="button" class="aboutPage-contains--btn btn">Download CV</button>
     </div>
   </div>
     <!-- myservices sections  -->
-  <div class="myservices">
+  <div class="myservices" id="Services">
     <div class="myservices-head">My Services</div>
     <div class="myservices-contains">
       <div class="myservices-contains--item" data-aos="fade-down" data-aos-duration="2000">
@@ -93,53 +90,77 @@
     </div>
   </div>
 
-  <div class="myskills">
+  <div class="myskills" id="Skills">
     <div class="myskills-head">
       <h5>My Skills</h5>
     </div>
     <div class="myskills-box">
-      <div class="myskills-levels">
+      <div class="myskills-levels"  data-aos="fade-right" data-aos-duration="2000">
         <div class="myskills-levels--box">
           <div class="myskills-levels--line">
             <h5>HTML5</h5>
             <span>95%</span>
             <div class="myskills-levels--total">
-              <div class="myskills-levels--score"></div>
+              <div class="myskills-levels--score html"></div>
             </div>
           </div>
           <div class="myskills-levels--line">
             <h5>CSS</h5>
             <span>85%</span>
             <div class="myskills-levels--total">
-              <div class="myskills-levels--score"></div>
+              <div class="myskills-levels--score css"></div>
             </div>
           </div>
           <div class="myskills-levels--line">
             <h5>JavaScript</h5>
             <span>90%</span>
             <div class="myskills-levels--total">
-              <div class="myskills-levels--score"></div>
+              <div class="myskills-levels--score javascript"></div>
             </div>
           </div>
           <div class="myskills-levels--line">
             <h5>Nodejs</h5>
             <span>80%</span>
             <div class="myskills-levels--total">
-              <div class="myskills-levels--score"></div>
+              <div class="myskills-levels--score nodejs"></div>
             </div>
           </div>
           <div class="myskills-levels--line">
             <h5>Mongodb</h5>
             <span>95%</span>
             <div class="myskills-levels--total">
-              <div class="myskills-levels--score"></div>
+              <div class="myskills-levels--score mongodb"></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="myskills-about">rerf</div>
+      <div class="myskills-about" data-aos="fade-left" data-aos-duration="2000">
+        <h4>My creative skills and experience</h4>
+        <p>I like to code things from scratch, and enjoy bringing ideas to life in the browser. I learned HTML, CSS, JavaScript, Nodejs, Python, C++ and many more in ways. I completed my #100DaysOfCode and created many project</p>
+        <input class="btn" type="button" value="More About me">
+      </div>
     </div>
   </div>
+
+  <div class="myteams">
+    <div class="myteams-head">My teams</div> 
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">
+            <div class="myteaams-box">
+              <div class="myteams-box--pic"></div>
+              <h6>people</h6>
+              <p>Team Leader, Project Creator.</p>
+            </div>
+          </li>
+          <li class="glide__slide">1</li>
+          <li class="glide__slide">2</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
 
   <footer>
     <p>Created by <a href="#" class="copy-link">Babith K P</a> | &copy; 2023 All rights reserved.</p>
@@ -152,8 +173,11 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <!-- Glidejs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
     <!-- Custom Script -->
     <script src="index.js"></script>
+    <script>
+      new Glide('.glide').mount();
+    </script>
   </body>
 </html>

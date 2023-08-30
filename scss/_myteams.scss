@@ -1,0 +1,19 @@
+.myteams{
+    background-color: aqua;
+    height: 70vh;
+
+    &-head{
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        color: var(--white);
+    }
+    .glide{
+        margin-top: 3rem;
+        background-color: yellowgreen;
+        height: 40%;
+    
+    }
+}

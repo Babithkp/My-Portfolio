@@ -1,4 +1,8 @@
 AOS.init();
+
+
+
+
 // nav bar position
 let firstPage = document.querySelector(".pageContainer");
 const navBar = document.querySelector("nav");
