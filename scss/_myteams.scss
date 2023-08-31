@@ -1,6 +1,11 @@
 .myteams{
-    background-color: aqua;
+    background-color: #111;
     height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
 
     &-head{
         height: 30%;
@@ -11,9 +16,42 @@
         color: var(--white);
     }
     .glide{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
         margin-top: 3rem;
-        background-color: yellowgreen;
-        height: 40%;
+        height: 50%;
+        width: 90%;
+
+        &__slide{
+            &-box{
+                color: var(--white);
+                font-size: 1.5rem;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                &--pic img{
+                    height: 100%;
+                    width: 13rem;
+                    object-fit: cover;
+                }
     
+                &--pic{
+                    height: 13rem;
+                    width: 13rem;
+                    border-radius: 100%;
+                    overflow: hidden;
+                    margin: 0 auto;
+                    border: .4rem solid var(--customColor);
+                }
+    
+            }
+            &--head,h6{
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+        }
+        
     }
 }

@@ -9,7 +9,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css"
+    />
     <!-- Glidejs -->
     <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
     <!-- Custom StyleSheet -->
@@ -89,7 +92,7 @@
       </div>
     </div>
   </div>
-
+  <!-- my skills section  -->
   <div class="myskills" id="Skills">
     <div class="myskills-head">
       <h5>My Skills</h5>
@@ -141,27 +144,58 @@
       </div>
     </div>
   </div>
-
+  <!-- my teams section -->
   <div class="myteams">
     <div class="myteams-head">My teams</div> 
     <div class="glide">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
           <li class="glide__slide">
-            <div class="myteaams-box">
-              <div class="myteams-box--pic"></div>
-              <h6>people</h6>
-              <p>Team Leader, Project Creator.</p>
+            <div class="glide__slide-box">
+              <div class="glide__slide-box--pic">
+                <img src="/assets/images/profile1.jpg" alt="profile photo">
+              </div>
+              <h6 class="glide__slide-box--head">
+              People</h6>
+              <p class="glide__slide-box--para">Team Leader, Project Creator.</p>
             </div>
           </li>
-          <li class="glide__slide">1</li>
-          <li class="glide__slide">2</li>
+          <li class="glide__slide">
+            <div class="glide__slide-box">
+              <div class="glide__slide-box--pic">
+                <img src="/assets/images/profile1.jpg" alt="profile photo">
+              </div>
+              <h6 class="glide__slide-box--head">
+              People</h6>
+              <p class="glide__slide-box--para">Team Leader, Project Creator.</p>
+            </div>
+          </li>
+          <li class="glide__slide">
+            <div class="glide__slide-box">
+              <div class="glide__slide-box--pic">
+                <img src="/assets/images/profile1.jpg" alt="profile photo">
+              </div>
+              <h6 class="glide__slide-box--head">
+              People</h6>
+              <p class="glide__slide-box--para">Team Leader, Project Creator.</p>
+            </div>
+          </li>
+          <li class="glide__slide">
+            <div class="glide__slide-box">
+              <div class="glide__slide-box--pic">
+                <img src="/assets/images/profile1.jpg" alt="profile photo">
+              </div>
+              <h6 class="glide__slide-box--head">
+              People</h6>
+              <p class="glide__slide-box--para">Team Leader, Project Creator.</p>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
   </div>
 
-
+<!-- footer section -->
   <footer>
     <p>Created by <a href="#" class="copy-link">Babith K P</a> | &copy; 2023 All rights reserved.</p>
   </footer>
@@ -173,11 +207,8 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <!-- Glidejs -->
-    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
     <!-- Custom Script -->
     <script src="index.js"></script>
-    <script>
-      new Glide('.glide').mount();
-    </script>
   </body>
 </html>
