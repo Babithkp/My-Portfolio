@@ -1,6 +1,5 @@
 AOS.init();
 
-new Glide('.glide').mount();
 
 
 // fix nav bar position
@@ -35,18 +34,23 @@ new TypeIt(`.${div}`, {
 typeit("animate");
 typeit("animates");
 
-var input = document.querySelector('.glide__track')
-
-var glide = new Glide('.glide', {
-  autoplay: input.value,
-  hoverpause: false,
-  perView: 3
-})
-
-input.addEventListener('input', function (event) {
-  glide.update({
-    autoplay: (event.target.value != 0) ? event.target.value : false
-  })
-})
-
-glide.mount()
+const glide = document.querySelector(".glide");
+if (glide)
+  new Glide(glide, {
+    type: "carousel",
+    startAt: 0,
+    perView: 3,
+    gap: 30,
+    hoverpause: true,
+    autoplay: 2000,
+    animationDuration: 800,
+    animationTimingFunc: "cubic-bezier(0.165, 0.840, 0.440, 1.000)",
+    breakpoints: {
+      996: {
+        perView: 2,
+      },
+      768: {
+        perView: 1,
+      },
+    },
+  }).mount();

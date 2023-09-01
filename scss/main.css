@@ -526,9 +526,14 @@ footer {
 .myteams .glide__slide-box {
   color: var(--white);
   font-size: 1.5rem;
+  height: 25rem;
+  border-radius: 1rem;
   display: flex;
   align-items: center;
+  justify-content: center;
+  border-bottom: 0.3rem solid var(--black);
   flex-direction: column;
+  transition: all 0.3s ease-in-out;
 }
 .myteams .glide__slide-box--pic img {
   height: 100%;
@@ -543,8 +548,63 @@ footer {
   overflow: hidden;
   margin: 0 auto;
   border: 0.4rem solid var(--customColor);
+  transition: all 0.3s ease-in-out;
+}
+.myteams .glide__slide-box:hover {
+  background-color: var(--customColor);
+  border-bottom: 0.3rem solid var(--white);
+}
+.myteams .glide__slide-box:hover .glide__slide-box--pic {
+  border: 0.4rem solid var(--white);
 }
 .myteams .glide__slide--head, .myteams .glide__slide h6 {
   font-size: 1.5rem;
+  padding: 1rem 1rem;
+}
+
+.contactme {
+  height: 75vh;
+}
+.contactme-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+  height: 40%;
+}
+.contactme-head h5 {
+  font-weight: 300;
+}
+.contactme-containt {
+  margin-left: 10rem;
+}
+.contactme-containt--menu {
   margin-bottom: 1rem;
+}
+.contactme-containt--menu h6 {
+  font-size: 2rem;
+  font-weight: 200;
+}
+.contactme-containt--details * {
+  display: grid;
+  grid-template-rows: 2rem 1fr;
+  grid-template-columns: 4rem 15rem;
+  row-gap: 0.2rem;
+  margin-bottom: 1rem;
+}
+.contactme-containt--details * i {
+  color: var(--customColor);
+  display: inline;
+  font-size: 2.5rem;
+  grid-column: 1/2;
+}
+.contactme-containt--details * h6 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.contactme-containt--details * p {
+  grid-column: 2;
+}
+.contactme-containt--details * a {
+  grid-column: 2;
 }/*# sourceMappingURL=main.css.map */
