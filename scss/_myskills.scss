@@ -1,7 +1,9 @@
 .myskills{
     min-height: 70vh;
+    width: 100%;
     display: grid;
     grid-template-rows: 30% 1fr;
+    overflow: hidden;
     
     &-head{
         grid-column: 1 / 3;

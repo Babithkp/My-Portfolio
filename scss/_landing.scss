@@ -59,11 +59,12 @@ li a{
 .pageContainer{
     height: 100%;
     display: grid;
-    grid-template-columns: minmax(40%,50%) 1fr;
+    grid-template-columns: minmax(40%,50%) minmax(60%,100%);
     grid-template-rows: 30% 1fr 1fr;
     margin-left: 14rem;
     position: relative;
     overflow: hidden;
+    padding-right: 15rem;
     
     &-intro{
         align-self: end;
@@ -118,15 +119,15 @@ li a{
     &-image{
         grid-row: 1 / 4;
         position: relative;
-
+        
     }
     &-image--png{
-        width: 100rem;
+        max-width: 100rem;
         height: 100%;
         z-index: 0;
         opacity: 0;
         scale: 2rem;
-        transform: scaleX(100rem);
+        
         animation: firsthero 1s ease-in-out 1.6s forwards;
     }
 }
