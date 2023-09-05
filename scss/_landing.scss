@@ -2,6 +2,10 @@
     background-color: var(--black);
     height: 100vh;
     position: inherit;
+
+    @media only screen and (max-width:1000px){
+        height: 60vh;
+    }
 }
 nav{
     color: var(--customColor);
@@ -13,6 +17,11 @@ nav{
     align-items: center;
     padding-left: 10rem;
     padding-right: 12rem;
+
+    
+}
+.hamburger{
+    display: none;
 }
 .nav{
     &-header{
@@ -23,8 +32,10 @@ nav{
         display: flex;
         z-index: 2;
         gap: 1rem;
-        
+
+
     }
+
     &-list *{
         color: #fff;
         text-decoration: none;
@@ -59,15 +70,15 @@ li a{
 .pageContainer{
     height: 100%;
     display: grid;
-    grid-template-columns: minmax(40%,50%) minmax(60%,100%);
-    grid-template-rows: 30% 1fr 1fr;
+    grid-template-columns: 50% minmax(60%,100%);
+    grid-template-rows: 20% 1fr minmax(10%,20%);
     margin-left: 14rem;
     position: relative;
     overflow: hidden;
     padding-right: 15rem;
     
     &-intro{
-        align-self: end;
+        align-self: center;
         grid-row: 2 / 3;
         
         & *{
@@ -81,7 +92,7 @@ li a{
             color: var(--blue);
             grid-row: 3 / -1;
             align-self: center;
-            margin-top: 15rem;
+            // margin-top: 15rem;
         }
         &--icons *{
             cursor: pointer;
@@ -127,7 +138,7 @@ li a{
         z-index: 0;
         opacity: 0;
         scale: 2rem;
-        
+        padding-right: 20rem;
         animation: firsthero 1s ease-in-out 1.6s forwards;
     }
 }
