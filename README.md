@@ -6,9 +6,8 @@
 
 ![Cover Image](https://raw.githubusercontent.com/ravi0900/portfolio-website-codedamn/master/assets/design/prev1.gif)
 
-You have to build Personal Project Website using Html,CSS and JavaScript concepts. Your challenge is to create a website as shown in the cover image and preview.
+I have build Personal Project Website using Html,CSS and JavaScript concepts. This challenge is from codedam 
 
 You can see the demo
-- [Demo](https://portfolio-website-dfsgm.netlify.app/)
+- [Checkout]((https://babithkp.github.io/My-Portfolio/))
 
-### So can you Build This ? All the Best !
