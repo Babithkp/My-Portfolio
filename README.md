@@ -9,5 +9,6 @@
 I have build Personal Project Website using Html,CSS and JavaScript concepts. This challenge is from codedam 
 
 You can see the demo
-![Checkout]((https://babithkp.github.io/My-Portfolio/))
+~[Checkout]((https://babithkp.github.io/My-Portfolio/))
 
+Checkout -> https://babithkp.github.io/My-Portfolio/
